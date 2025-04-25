@@ -1,10 +1,18 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
+  background: linear-gradient(to right, #fff0f6, #ffe6f0);
+  color: #4a0d35;
+  overflow-x: hidden;
 }
 
 .song {
@@ -29,30 +37,39 @@ body {
 }
 
 .one {
-  font-size: 4.5rem;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ec407a;
 }
 
 .two {
-  font-size: 1.2rem;
-  font-weight: lighter;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #7b1e5e;
 }
 
 .three {
-  font-size: 3rem;
+  font-size: 3.2rem;
+  color: #f06292;
+  font-weight: 600;
 }
 
 .four .text-box {
-  border: 3px solid #aaa;
-  border-radius: 5px;
+  background: #fff0f6;
+  border: 2px solid #f8bbd0;
+  border-radius: 12px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
   position: relative;
   width: 600px;
+  box-shadow: 0 8px 20px rgba(236, 64, 122, 0.2);
 }
 
 .text-box p {
   margin: 0;
   text-align: left;
+  font-size: 1.1rem;
+  color: #6a1b45;
 }
 
 .text-box span {
@@ -60,40 +77,51 @@ body {
 }
 
 .text-box .fake-btn {
-  background-color: rgb(21, 161, 237);
-  border-radius: 3px;
-  bottom: -50px;
-  color: #fff;
-  padding: .5rem 1rem;
+  background: #ec407a;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 0.6rem 1.2rem;
   position: absolute;
-  right: 5px;
+  right: 10px;
+  bottom: -50px;
+  box-shadow: 0 4px 12px rgba(236, 64, 122, 0.4);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.text-box .fake-btn:hover {
+  background: #d81b60;
 }
 
 .five p {
   font-size: 2rem;
-  left: 0;
   position: absolute;
+  left: 0;
   right: 0;
 }
 
 .idea-3 strong {
-  border-radius: 3px;
-  display: inline-block;
-  padding: 3px 5px;
+  border-radius: 5px;
+  background: #f8bbd0;
+  padding: 4px 7px;
 }
 
 .five .idea-5 {
-  font-size: 4rem;
+  font-size: 4.5rem;
+  color: #d81b60;
 }
 
-.idea-5 span, .idea-6 span, .wish-hbd span {
+.idea-5 span,
+.idea-6 span,
+.wish-hbd span {
   display: inline-block;
 }
 
-.idea-6 span{
-  font-size: 15rem;
+.idea-6 span {
+  font-size: 13rem;
+  color: #ad1457;
 }
-
 
 .six {
   position: relative;
@@ -102,16 +130,15 @@ body {
 }
 
 .six img {
-  display: inline-block;
   height: 350px;
   max-width: 100%;
-  /* height: auto; */
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(236, 64, 122, 0.3);
 }
 
 .six .hat {
   left: 41.5%;
   position: absolute;
-  /* transform: scale(0.1); */
   top: -35%;
   width: 80px;
 }
@@ -133,7 +160,8 @@ body {
   left: 30%;
 }
 
-.seven, .eight {
+.seven,
+.eight {
   height: 100vh;
   position: fixed;
   top: 0;
@@ -149,105 +177,66 @@ body {
   z-index: -1;
 }
 
-.eight svg:nth-child(1) {
-  fill: #bd6ecf;
-  left: 5vw;
-  top: 7vh;
-}
-
-.eight svg:nth-child(2) {
-  fill: #7dd175;
-  left: 35vw;
-  top: 23vh;
-}
-
-.eight svg:nth-child(3) {
-  fill: #349d8b;
-  left: 23vw;
-  top: 33vh;
-}
-
-.eight svg:nth-child(4) {
-  fill: #347a9d;
-  left: 57vw;
-  top: 43vh;
-}
-
-.eight svg:nth-child(5) {
-  fill: #c66053;
-  left: 7vw;
-  top: 68vh;
-}
-
-.eight svg:nth-child(6) {
-  fill: #bfaa40;
-  left: 77vw;
-  top: 42vh;
-}
-
-.eight svg:nth-child(7) {
-  fill: #e3bae8;
-  left: 83vw;
-  top: 68vh;
-}
-
-.eight svg:nth-child(8) {
-  fill: #8762cb;
-  left: 37vw;
-  top: 86vh;
-}
-
-.eight svg:nth-child(9) {
-  fill: #9a90da;
-  left: 87vw;
-  top: 94vh;
-}
+.eight svg:nth-child(1) { fill: #f06292; left: 5vw; top: 7vh; }
+.eight svg:nth-child(2) { fill: #f8bbd0; left: 35vw; top: 23vh; }
+.eight svg:nth-child(3) { fill: #f48fb1; left: 23vw; top: 33vh; }
+.eight svg:nth-child(4) { fill: #f06292; left: 57vw; top: 43vh; }
+.eight svg:nth-child(5) { fill: #f8bbd0; left: 7vw; top: 68vh; }
+.eight svg:nth-child(6) { fill: #ec407a; left: 77vw; top: 42vh; }
+.eight svg:nth-child(7) { fill: #ad1457; left: 83vw; top: 68vh; }
+.eight svg:nth-child(8) { fill: #ba68c8; left: 37vw; top: 86vh; }
+.eight svg:nth-child(9) { fill: #fce4ec; left: 87vw; top: 94vh; }
 
 .wish-hbd {
   font-size: 3em;
   margin: 0;
   text-transform: uppercase;
+  color: #ec407a;
+  font-weight: bold;
 }
 
 .wish h5 {
   font-size: 2rem;
   font-weight: lighter;
   margin: 10px 0 0;
+  color: #9c2a6f;
 }
 
 .nine p {
   font-size: 2rem;
-  font-weight: lighter;
+  font-weight: 300;
+  color: #6a1b45;
 }
 
 #replay {
   cursor: pointer;
   z-index: 3;
+  background: #ec407a;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+#replay:hover {
+  background: #d81b60;
 }
 
 /* Media Queries */
 @media screen and (max-height: 1000px) {
-  .six .hat {
-    left: 40%;
-  }
+  .six .hat { left: 40%; }
 }
 
 @media screen and (max-height: 800px) {
-  .six .hat {
-    left: 37%;
-  }
+  .six .hat { left: 37%; }
 }
 
 @media screen and (max-height: 700px) {
-  .six .hat {
-    left: 32%;
-  }
+  .six .hat { left: 32%; }
 }
 
 @media screen and (max-height: 850px) and (max-width: 450px) {
-  .six .hat {
-    left: 32%;
-  }
+  .six .hat { left: 32%; }
 }
 
 @media screen and (max-width: 500px) {
@@ -273,7 +262,6 @@ body {
   }
 
   .six .hat {
-    /* top: -20px; */
     width: 50px;
   }
 
@@ -287,6 +275,103 @@ body {
 
   .nine p {
     font-size: 1.5rem;
-    font-weight: lighter;
   }
+}
+
+/* Birthday Cake - Pink Theme */
+.cake-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.birthday-cake {
+  position: relative;
+  width: 150px;
+  height: 200px;
+}
+
+.plate {
+  width: 180px;
+  height: 20px;
+  background: #f8bbd0;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: -15px;
+}
+
+.cake {
+  position: absolute;
+  bottom: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.layer {
+  width: 100%;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.layer-bottom {
+  height: 50px;
+  bottom: 0;
+  background: #f06292;
+}
+
+.layer-middle {
+  height: 50px;
+  bottom: 50px;
+  background: #ec407a;
+}
+
+.layer-top {
+  height: 50px;
+  bottom: 100px;
+  background: #d81b60;
+}
+
+.candle {
+  width: 10px;
+  height: 40px;
+  background: #fff;
+  position: absolute;
+  top: -40px;
+  left: calc(50% - 5px);
+  border-radius: 2px;
+}
+
+.flame {
+  width: 10px;
+  height: 15px;
+  background: orange;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  animation: flicker 0.3s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { transform: rotate(-2deg) scale(1); }
+  100% { transform: rotate(2deg) scale(1.1); }
+}
+
+#blow-out {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ec407a;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#blow-out:hover {
+  background: #c2185b;
 }
